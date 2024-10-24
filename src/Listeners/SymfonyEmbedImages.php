@@ -191,7 +191,7 @@ class SymfonyEmbedImages
         }
 
         // Base64 embedding
-        if (preg_match('/^data:image\/[a-z]+;base64,/', $src)) {
+        if (preg_match('/^data:image\/.+;base64/', $src)) {
             return $embedder->fromBase64($src);
         }
 
